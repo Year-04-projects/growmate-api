@@ -7,6 +7,10 @@ from burnDamage import damage_classify
 
 app = Flask(__name__)
 
+@app.route("/", methods=['GET'])
+def index():
+    return '<h1>Hello, World!</h1>'
+
 @app.route("/test", methods=['GET'])
 def testing():
     return 'testing'
@@ -22,4 +26,4 @@ def burnDamage():
     return output
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', debug=True)
