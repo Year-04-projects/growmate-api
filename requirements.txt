@@ -1,5 +1,5 @@
 Flask
-requests
+Requests
 Pillow
 matplotlib
 tensorflow
@@ -7,3 +7,4 @@ numpy
 pandas
 scikit-learn
 gunicorn
+tensorflow_intel
