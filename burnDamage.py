@@ -15,7 +15,6 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 
-app = Flask(__name__)
 # Load the trained model from the pickle file
 with open('Damage_Classification_2.pkl', 'rb') as f:
     damage_classify_model = pickle.load(f)
@@ -85,6 +84,3 @@ def damage_classify():
         level=burn_level(top,uploaded_image_url)
 
     return ({"Prediction":str(top), "Level":level})
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
